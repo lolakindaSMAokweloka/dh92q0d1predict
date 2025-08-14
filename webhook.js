@@ -7,7 +7,10 @@ async function sendMsg (content) {
     const embed = {
         title: "Incoming Rare Gear, Seed and Egg Prediction",
         description: content,
-        color: 0x00AE86
+        color: 0x00AE86,
+        footer: {
+            text: "Made by borzxy"
+        },
     };
     const res = await fetch(webhookurl + "?wait=true", {
         method: "POST",
@@ -27,7 +30,10 @@ async function editMsg (content) {
     const embed = {
         title: "Incoming Rare Gear, Seed and Egg Prediction",
         description: content,
-        color: 0x00AE86
+        color: 0x00AE86,
+        footer: {
+            text: "Made by borzxy"
+        },
     };
     const res = await fetch(`${webhookurl}/messages/${msgId}`, {
         method: "PATCH",
@@ -45,5 +51,5 @@ async function editMsg (content) {
         } = require('./predict');
         const textAkhir = await getStockList();
         await editMsg(textAkhir)
-    }, 10 * 1000);
+    }, 30 * 1000);
 })();
