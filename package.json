@@ -1,0 +1,12 @@
+{
+  "name": "webhook-predict",
+  "version": "1.0.0",
+  "main": "webhook.js",
+  "type": "module",
+  "scripts": {
+    "start": "node webhook.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
